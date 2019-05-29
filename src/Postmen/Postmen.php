@@ -132,12 +132,12 @@ class Postmen
 		}
 		$headers_date = $response_headers_array['Date'];
 		$calls_left = 0;
-		if (isset($response_headers_array['X-RateLimit-Remaining'])) {
-			$calls_left = (int)$response_headers_array['X-RateLimit-Remaining'];
+		if (isset($response_headers_array['x-ratelimit-remaining'])) {
+			$calls_left = (int)$response_headers_array['x-ratelimit-remaining'];
 		}
 		$reset = 0;
-		if (isset($response_headers_array['X-RateLimit-Reset'])) {
-			$reset = (int)(((int)$response_headers_array['X-RateLimit-Reset']) / 1000);
+		if (isset($response_headers_array['x-ratelimit-reset'])) {
+			$reset = (int)(((int)$response_headers_array['x-ratelimit-Reset']) / 1000);
 		}
 		// convert headers date to timestamp, please refer to
 		// https://tools.ietf.org/html/rfc7231#section-7.1.1.1
