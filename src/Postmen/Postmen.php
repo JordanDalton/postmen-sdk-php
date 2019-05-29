@@ -137,7 +137,7 @@ class Postmen
 		}
 		$reset = 0;
 		if (isset($response_headers_array['x-ratelimit-reset'])) {
-			$reset = (int)(((int)$response_headers_array['x-ratelimit-Reset']) / 1000);
+			$reset = (int)(((int)$response_headers_array['x-ratelimit-reset']) / 1000);
 		}
 		// convert headers date to timestamp, please refer to
 		// https://tools.ietf.org/html/rfc7231#section-7.1.1.1
