@@ -130,7 +130,7 @@ class Postmen
 			list($key, $value) = array_pad(explode(': ', $line, 2), 2, null);
 			$response_headers_array[$key] = $value;
 		}
-		$headers_date = $response_headers_array['Date'];
+		$headers_date = $response_headers_array['date'];
 		$calls_left = 0;
 		if (isset($response_headers_array['x-ratelimit-remaining'])) {
 			$calls_left = (int)$response_headers_array['x-ratelimit-remaining'];
